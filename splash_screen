@@ -1,0 +1,35 @@
+import 'package:flutter/material.dart';
+
+//splash_screen
+void main() {
+  runApp(
+    MaterialApp(
+      home: HomeScreen(),
+    ),
+  );
+}
+
+//위젯 만들기! StatelessWidget
+class HomeScreen extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Color(0xFF335CB0),
+      body: Padding(
+        padding: EdgeInsets.symmetric(horizontal: 32.0,),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center, //세로로 정렬
+          children: [
+            Image.asset(
+              'asset/img/logo.png',
+            ),
+            SizedBox(height: 28.0,),//간격
+            CircularProgressIndicator(
+              color: Colors.white,
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
